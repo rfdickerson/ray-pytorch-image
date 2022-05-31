@@ -1,3 +1,9 @@
-FROM rayproject/ray:1.13.0-gpu
+FROM rayproject/ray:latest-gpu
 
-RUN pip install -U --no-cache-dir torch torchvision torchaudio
+RUN pip install --no-cache-dir -U pip \
+  torch \
+  torchvision \
+  torchaudio \
+  mlflow \
+  jupyter \
+  pandas
